@@ -20,7 +20,7 @@ public class Utills {
         return output.toString();
     }
 
-    public void parse2016ElectionResults(String data){
+    public static ArrayList<ElectionResult> parse2016ElectionResults(String data){
         ArrayList<ElectionResult> list = new ArrayList<ElectionResult>();
         String[] a = data.split("/n");
         for(String s : a){
@@ -65,7 +65,10 @@ public class Utills {
 
 
             }
+            list.add(currResult);
+
         }
+        return list;
     }
 
     public String removeCommas(String string){
