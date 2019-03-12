@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
-
 public class Utills {
 
     public static String readFileAsString(String filepath) {
@@ -40,13 +39,8 @@ public class Utills {
                 currResult.setPer_dem(Double.parseDouble(categorys[4]));
                 currResult.setPer_gop(Double.parseDouble(categorys[5]));
                 String tempStrings = "";
-                for(int j = 0; categorys[6].charAt(j) != '%'; i++){
-                    char c3 = categorys[6].charAt(j);
-                    if(c3 != '%'){
-                        tempStrings += c3;
-                    }
-                }
-                currResult.setPer_point_dif(Double.parseDouble(tempStrings));
+
+                currResult.setPer_point_dif(Double.parseDouble(categorys[6]));
 
                 currResult.setState_abbr(categorys[7]);
 
@@ -76,6 +70,7 @@ public class Utills {
         return result;
     }
 }
+
 
 
 
